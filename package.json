@@ -3,7 +3,7 @@
   "version": "0.3.1",
   "description": "javascript utils",
   "main": "dist/oliver_lou-utils.node.cjs.js",
-  "module": "dist/oliver_lou-utils.node.esm.js",
+  "module": "dist/oliver_lou-utils.browser.esm.js",
   "types": "dist/node.d.ts",
   "scripts": {
     "test": "pnpm run build && mocha",
