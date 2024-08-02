@@ -1,6 +1,6 @@
 {
   "name": "@oliver_lou/utils",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "javascript utils",
   "main": "dist/oliver_lou-utils.node.cjs.js",
   "module": "dist/oliver_lou-utils.browser.esm.js",
