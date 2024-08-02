@@ -5,7 +5,6 @@
   "main": "dist/oliver_lou-utils.node.cjs.js",
   "module": "dist/oliver_lou-utils.node.esm.js",
   "types": "dist/node.d.ts",
-  "type": "module",
   "scripts": {
     "test": "pnpm run build && mocha",
     "clean": "rimraf ./dist",
