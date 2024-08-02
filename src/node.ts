@@ -13,6 +13,7 @@ export function getDirname(url: string): string {
   if (os.platform() === 'win32') {
     return path.dirname(decodeURI(url).slice(8).replace(/\//g, '\\'))
   } else {
-    return path.dirname(url.slice(7))
+    // 加decodeURI主要是为了解决路径中如果有中文存在乱码的问题
+    return path.dirname(decodeURI(url).slice(7))
   }
 }
