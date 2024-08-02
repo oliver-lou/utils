@@ -13,7 +13,7 @@ import {
   isEmptyObject,
   // compileStr,
   // decompileStr,
-} from '../dist/oliver_lou-utils.node.esm.js'
+} from '../dist/oliver_lou-utils.node.esm.mjs'
 
 describe('node.esm', () => {
   describe('isBoolean()', () => {

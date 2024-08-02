@@ -1,5 +1,5 @@
 /*!
- * @oliver_lou/utils v0.3.1
+ * @oliver_lou/utils v0.3.3
  * Copyright (c) 2024 oliver_lou
  * @license MIT
  */
@@ -1978,7 +1978,8 @@ function getDirname(url) {
         return path.dirname(decodeURI(url).slice(8).replace(/\//g, '\\'));
     }
     else {
-        return path.dirname(url.slice(7));
+        // 加decodeURI主要是为了解决路径中如果有中文存在乱码的问题
+        return path.dirname(decodeURI(url).slice(7));
     }
 }
 

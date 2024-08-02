@@ -53,7 +53,7 @@ export default [
     plugins,
     output: [
       {
-        file: 'dist/oliver_lou-utils.node.esm.js',
+        file: 'dist/oliver_lou-utils.node.esm.mjs',
         format: 'es',
         banner,
         globals,
