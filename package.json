@@ -1,0 +1,51 @@
+{
+  "name": "@oliver_lou/utils",
+  "version": "0.3.1",
+  "description": "javascript utils",
+  "main": "dist/oliver_lou-utils.node.cjs.js",
+  "module": "dist/oliver_lou-utils.node.esm.js",
+  "types": "dist/node.d.ts",
+  "type": "module",
+  "scripts": {
+    "test": "pnpm run build && mocha",
+    "clean": "rimraf ./dist",
+    "build": "pnpm clean && rollup -c rollup.config.mjs"
+  },
+  "keywords": ["utils"],
+  "author": "oliver lou",
+  "email": "oliver_lou@163.com",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "lodash-es": "4.17.21",
+    "moment": "2.29.1",
+    "qs": "6.9.6",
+    "typescript": "4.7.4"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "26.0.1",
+    "@rollup/plugin-node-resolve": "15.2.3",
+    "@rollup/plugin-replace": "5.0.7",
+    "@rollup/plugin-terser": "0.4.4",
+    "@types/chai": "4.3.3",
+    "@types/lodash-es": "4.17.6",
+    "@types/mocha": "9.1.1",
+    "@types/node": "18.6.4",
+    "chai": "4.3.6",
+    "eslint": "7.21.0",
+    "mocha": "9.1.3",
+    "rimraf": "6.0.1",
+    "rollup": "4.19.1",
+    "rollup-plugin-dts": "6.1.1",
+    "rollup-plugin-typescript2": "0.36.0",
+    "ts-node": "10.9.1"
+  },
+  "engines": {
+    "node": ">= 20",
+    "npm": ">= 8.1.1",
+    "yarn": ">= 1.22.19",
+    "pnpm": ">= 9.5.0"
+  }
+}

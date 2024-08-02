@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #app {
+            height: 400px;
+            border: 1px solid red;
+            overflow-y: scroll;
+        }
+
+        .box {
+            height: 800px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='app'>
+        <div class="box"></div>
+    </div>
+    <script type="module">
+        import { debounce, throttle } from '../dist/oliver_lou-utils.browser.esm.js'
+        // app.onscroll = debounce(function (e) {
+        //     console.log(this);
+        // }, 1000);
+        app.onscroll = throttle(function (e) {
+            console.log(this);
+        }, 1000);
+    </script>
+</body>
+
+</html>

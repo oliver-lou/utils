@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>compatibility-test</title>
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
+  <script src="https://cdn.lltsj.cn/vue.js"></script>
+  <script>
+    Vue.config.productionTip = false
+  </script>
+</head>
+
+<body>
+  <div id='app'>
+    <ul>
+      <li v-for="(item, iKey) in list" :key="iKey">
+        {{item.name}}：{{item.value}}
+      </li>
+    </ul>
+  </div>
+  <script type="module">
+    // 这样导入不了，因为没有.js后缀名（0.2.0以前）
+    // import { isAndroid, isiOS } from '../dist/index.js'
+
+    // 第三方的库导入不了，比如qs
+    import { isAndroid, isiOS, isWeChatBrowser, isEnterpriseWeChatBrowser, isAlipayBrowser, isDingTalkBrowser } from '../dist/oliver_lou-utils.browser.esm.js'
+    // import { isAndroid, isiOS, isWeChatBrowser, isEnterpriseWeChatBrowser, isAlipayBrowser, isDingTalkBrowser } from '../dist/compatibility.js'
+    // console.log('isAndroid:' + isAndroid())
+    // console.log('isiOS:' + isiOS())
+    // console.log('isWeChatBrowser:' + isWeChatBrowser())
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        list: [
+          {
+            name: 'isAndroid',
+            value: isAndroid(),
+          },
+          {
+            name: 'isiOS',
+            value: isiOS(),
+          },
+          {
+            name: '微信浏览器(isWeChatBrowser)',
+            value: isWeChatBrowser(),
+          },
+          {
+            name: '企业微信浏览器(isEnterpriseWeChatBrowser)',
+            value: isEnterpriseWeChatBrowser(),
+          },
+          {
+            name: '支付宝浏览器(isAlipayBrowser)',
+            value: isAlipayBrowser(),
+          },
+          {
+            name: '钉钉浏览器(isDingTalkBrowser)',
+            value: isDingTalkBrowser(),
+          },
+        ]
+      }
+    })
+    // 30Pro 手机企业微信App，isAndroid、isWeChatBrowser、isEnterpriseWeChatBrowser均为true，其他为false
+  </script>
+</body>
+
+</html>

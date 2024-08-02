@@ -1,0 +1,6 @@
+export const notStringErrorMessage = '需传入一个字符串作为参数！'
+export const notNumberErrorMessage = '需传入一个数字作为参数！'
+export const notBooleanErrorMessage = '需传入一个布尔值作为参数！'
+export const notArrayErrorMessage = '需传入一个数组作为参数！'
+export const notObjectErrorMessage = '需传入一个对象作为参数！'
+export const notNarrowObjectErrorMessage = '需传入一个狭义对象作为参数！'
